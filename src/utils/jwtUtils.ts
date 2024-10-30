@@ -3,7 +3,7 @@ import jwt from "jsonwebtoken";
 class JWTUtils {
   async generateAccessToken(payload: object): Promise<string> {
     return jwt.sign(payload, process.env.ACCESS_TOKEN_SECRET!, {
-      expiresIn: "15m",
+      expiresIn: "15d",
     });
   }
 
