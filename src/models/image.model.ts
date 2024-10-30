@@ -15,6 +15,8 @@ interface ImageModel
   // Some fields are optional when calling UserModel.create() or UserModel.build()
   id: CreationOptional<number>;
   url: string;
+  metadata?: string;
+  userId?: number;
 }
 
 const ImageModel = db.define<ImageModel>("Image", {
@@ -24,6 +26,9 @@ const ImageModel = db.define<ImageModel>("Image", {
     type: DataTypes.INTEGER.UNSIGNED,
   },
   url: {
+    type: DataTypes.STRING,
+  },
+  metadata: {
     type: DataTypes.STRING,
   },
 });

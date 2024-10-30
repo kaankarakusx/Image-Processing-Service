@@ -6,6 +6,7 @@ import {
   Model,
 } from "sequelize";
 import { db } from "../config/db";
+import ImageModel from "./image.model";
 
 interface UserModel
   extends Model<
@@ -43,5 +44,14 @@ const UserModel = db.define<UserModel>(
     },
   }
 );
+
+UserModel.hasMany(ImageModel, {
+  foreignKey: "userId",
+  as: "images",
+});
+ImageModel.belongsTo(UserModel, {
+  foreignKey: "userId",
+  as: "user",
+});
 
 export default UserModel;
