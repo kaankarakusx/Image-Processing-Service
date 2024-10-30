@@ -21,7 +21,7 @@ Installation
 
 To get started, clone the repository and install dependencies:
 
-        `git clone [<repository-url>](https://github.com/kaankarakusx/Image-Processing-Service.git) cd image-processing-service npm install`
+        `git clone https://github.com/kaankarakusx/Image-Processing-Service.git cd image-processing-service npm install`
         
     
 
